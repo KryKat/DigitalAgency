@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Agency</title>
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
@@ -13,7 +17,11 @@
           <img src="img/logo.svg" alt="A+ Studio" />
         </a>
         <nav class="header__nav">
-          <ul class="header__list">
+          <div class="header__burger" id="burger" onclick="navToggle()">
+            <span class="material-icons icon-menu">menu</span>
+            <span class="material-icons icon-close">close</span>
+          </div>
+          <ul class="header__list" id="headerMenu">
             <li class="header__item">
               <a href="/" class="header__link">Home</a>
             </li>
@@ -50,5 +58,6 @@
         </div>
       </section>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

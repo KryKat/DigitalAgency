@@ -2,7 +2,7 @@ body {
     font-family: $ff-main;
 }
 .container {
-    max-width: $container +20px;
+    max-width: $container (+20px);
     margin-inline: auto;
     background: #FEFEFE;
     padding: 0 20px;
