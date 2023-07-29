@@ -4,6 +4,14 @@
   align-items: center;
   padding-top: 146px;
   padding-bottom: 64px;
+  @include desktop-small {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 0;
+  }
+  @include tablet {
+    padding-top: 0;
+  }
 
   &__video {
     max-width: 550px;
@@ -11,7 +19,6 @@
     position: relative;
     img {
       border-radius: 32px;
-      background: url(<path-to-image>), lightgray 50% / cover no-repeat, #c4c4c4;
       box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
       position: relative;
     }
@@ -25,11 +32,25 @@
         height: 129px;
         border-radius: 100px;
         background: $semiOrange;
+        @include desktop-small {
+            display: none;
+        }
+  }
+  @include desktop-small {
+    max-width: 100%;
+    img {
+        width: 100%;
+        border-radius: 50px;
+    }
   }
 }
 
   &__info {
     max-width: 532px;
+    @include desktop-small {
+        max-width: 100%;
+      }
+
   }
 
   &__title {
@@ -39,6 +60,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 30px;
   }
 
   &__desc {
