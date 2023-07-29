@@ -8,6 +8,7 @@
   @include tablet {
     align-items: stretch;
     flex-direction: column-reverse;
+    padding-bottom: 0;
   }
 
   &__info {
