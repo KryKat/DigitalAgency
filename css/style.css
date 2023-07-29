@@ -519,11 +519,22 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1200px) {
+  .users-section__people {
+    justify-content: center;
+  }
+}
 .users-section__story {
   display: flex;
   justify-content: space-between;
   max-width: 868px;
   width: 100%;
+}
+@media (max-width: 992px) {
+  .users-section__story {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .users-section__photo {
   max-width: 389px;
@@ -533,6 +544,11 @@ body {
   border-radius: 500px 0px 500px 500px;
   background: url(<path-to-image>), lightgray 50%/cover no-repeat;
   box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 992px) {
+  .users-section__photo img {
+    border-radius: 6px;
+  }
 }
 .users-section__info {
   max-width: 412px;
@@ -560,6 +576,11 @@ body {
   max-width: 245px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1200px) {
+  .users-section__users-photo {
+    display: none;
+  }
 }
 .users-section__img1 {
   position: relative;

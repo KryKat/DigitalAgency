@@ -30,12 +30,19 @@
   &__people {
     display: flex;
     justify-content: space-between;
+    @include desktop-small {
+        justify-content: center;
+    }
   }
   &__story {
     display: flex;
     justify-content: space-between;
     max-width: 868px;
     width: 100%;
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
   }
 
   &__photo {
@@ -45,6 +52,11 @@
         border-radius: 500px 0px 500px 500px;
         background: url(<path-to-image>), lightgray 50% / cover no-repeat;
         box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
+    }
+    @include tablet {
+        img {
+            border-radius: 6px;
+        }
     }
   }
 
@@ -77,6 +89,9 @@
     max-width: 245px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @include desktop-small {
+        display: none;
+    }
   }
   &__img1 {
     position: relative;
