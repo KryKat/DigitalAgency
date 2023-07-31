@@ -3,11 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 146px;
-  padding-bottom: 64px;
+  padding-bottom: 181px;
   @include desktop-small {
     flex-direction: column;
     gap: 20px;
-    padding-bottom: 0;
+    padding-bottom: 100px;
   }
   @include tablet {
     padding-top: 0;
