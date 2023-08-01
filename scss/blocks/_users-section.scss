@@ -29,13 +29,15 @@
     font-weight: 400;
     line-height: 160%;
   }
-  
+
   &__people {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     @include tablet {
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
     @include tablet-small {
         flex-direction: column;
@@ -52,17 +54,12 @@
         background: url(<path-to-image>), lightgray 50% / cover no-repeat;
         box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
     }
-    @include tablet-small {
-        img {
-            border-radius: 6px;
-        }
-    }
   }
 
   &__info {
     max-width: 412px;
     padding-top: 84px;
-    @include tablet-small {
+    @include tablet {
       text-align: center;
       padding-top: 0px;
     }
@@ -93,19 +90,34 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     @include tablet {
-        display: none;
+      display: flex;
+      max-width: 100%;
+      gap: 10px;
+      img {
+        min-width: 50px;
+        width: 100%;
+      }
     }
   }
   &__img1 {
     position: relative;
     top: 58px;
+    @include tablet {
+      position: static;
+    }
   }
   &__img4 {
     position: relative;
     top: 80px;
+    @include tablet {
+      position: static;
+    }
   }
   &__img5 {
     position: relative;
     left: 80px;
+    @include tablet {
+      position: static;
+    }
   }
 }

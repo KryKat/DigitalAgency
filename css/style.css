@@ -528,7 +528,9 @@ body {
 }
 @media (max-width: 992px) {
   .users-section__people {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 768px) {
@@ -547,16 +549,11 @@ body {
   background: url(<path-to-image>), lightgray 50%/cover no-repeat;
   box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
 }
-@media (max-width: 768px) {
-  .users-section__photo img {
-    border-radius: 6px;
-  }
-}
 .users-section__info {
   max-width: 412px;
   padding-top: 84px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .users-section__info {
     text-align: center;
     padding-top: 0px;
@@ -587,20 +584,41 @@ body {
 }
 @media (max-width: 992px) {
   .users-section__users-photo {
-    display: none;
+    display: flex;
+    max-width: 100%;
+    gap: 10px;
+  }
+  .users-section__users-photo img {
+    min-width: 50px;
+    width: 100%;
   }
 }
 .users-section__img1 {
   position: relative;
   top: 58px;
 }
+@media (max-width: 992px) {
+  .users-section__img1 {
+    position: static;
+  }
+}
 .users-section__img4 {
   position: relative;
   top: 80px;
 }
+@media (max-width: 992px) {
+  .users-section__img4 {
+    position: static;
+  }
+}
 .users-section__img5 {
   position: relative;
   left: 80px;
+}
+@media (max-width: 992px) {
+  .users-section__img5 {
+    position: static;
+  }
 }
 
 .form-section {
